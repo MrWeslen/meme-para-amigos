@@ -1,0 +1,79 @@
+body{
+    background-image: linear-gradient(to right, #4900ff, #e03480)
+}
+/* For this example, I kept it easy, with 100% height to center the button */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+/* Formato das imagens*/
+#cupido{
+    width: 120px;
+}
+#diabinho{
+    width: 120px;
+}
+/*Formato do texto */
+h2{
+    color: #f0f3a7;
+    font-size: 2em;
+}
+h1{
+    color: #f0f3a7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Para este exemplo, usamos flexbox para realmente centralizar o botão */
+.flex {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+/* Com um container relativo ao flexbox, ele está sempre em posição */
+.container {
+    position: relative;
+}
+/* O botão de movimento mágico*/
+button#move {
+    position: relative;
+    padding: 10px 20px;
+    background-color:#f0f3a7 ;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    margin: auto;
+    cursor: pointer;
+}
+/* Não parado */
+
+button#pare {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #f0f3a7;
+    color: ;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    margin: auto;
+    cursor: pointer;
+}
+
+/* Apenas para o sentido de um botão real  */
+button#pare:hover {
+    background-color: rgba(182, 226, 24, 1);
+}
