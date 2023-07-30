@@ -1,4 +1,4 @@
-let nome = prompt('Qual o seu nome, jovem senhor(a)?')
+let nome = prompt('Então... Como eu posso te chamar?')
 
 document.getElementById('nome').innerText = nome
 

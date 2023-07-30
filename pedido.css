@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to right, #4900ff, #e03480)
+    background:#FFF
 }
 /* For this example, I kept it easy, with 100% height to center the button */
 html, body {
@@ -17,11 +17,11 @@ html, body {
 }
 /*Formato do texto */
 h2{
-    color: #f0f3a7;
+    color: #000;
     font-size: 2em;
 }
 h1{
-    color: #f0f3a7;
+    color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@ a{
 button#move {
     position: relative;
     padding: 10px 20px;
-    background-color:#f0f3a7 ;
+    background-color:#B3B5B3 ;
     color: #000000;
     border: none;
     border-radius: 5px;
@@ -64,16 +64,22 @@ button#move {
 button#pare {
     position: relative;
     padding: 10px 20px;
-    background-color: #f0f3a7;
-    color: ;
+    background-color: #3D85C6;
+    color:#FFF ;
     border: none;
     border-radius: 5px;
     font-size: 24px;
     margin: auto;
     cursor: pointer;
+    
 }
 
 /* Apenas para o sentido de um botão real  */
 button#pare:hover {
-    background-color: rgba(182, 226, 24, 1);
+    background-color:#230798 ;
 }
+
+button#pare:visited {
+    background-color: #3D85C6;
+    color:#FFF ;
+  }
