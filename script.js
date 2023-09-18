@@ -1,43 +1,41 @@
-let nome = prompt('Então... Como eu posso te chamar?')
+const btn = document.querySelector(".no");
+let position = 0;
 
-document.getElementById('nome').innerText = nome
+const moveButton = () => {
+position = position ? 0 : 150;
+btn.style.transform = `translate(${position}px, 0px)`;
+btn.style.transition = "all 0.2s ease";
+};
 
-// Declara as variáveis ​​necessárias
-// largura e altura devem ser divididas por 2
-// porque você precisará calcular do meio da tela
-const button = document.querySelector( '#move');
-let width = window.innerWidth / 2;
-let height = window.innerHeight / 2;
-let leftPosition = 0;
-let topPosition = 0;
+btn.addEventListener("click", moveButton);
+btn.addEventListener("mouseover", moveButton);
 
-// Função para definir a nova largura e altura
-const getWindowSizes = () => {
-      width = ( window.innerWidth ) / 2;
-      height = ( window.innerHeight ) / 2;
-      return width, height;
+
+const sim = document.getElementById('yes');
+
+sim.addEventListener("click", () => {
+
+let timerInterval
+Swal.fire({
+ title: 'Eita',
+ html: 'Por essa nao esperava kkkk',
+ timer: 2000,
+ timerProgressBar: true,
+ didOpen: () => {
+Swal.showLoading()
+const b = Swal.getHtmlContainer().querySelector('b')
+timerInterval = setInterval(() => {
+  b.textContent = Swal.getTimerLeft()
+}, 100)
+},
+willClose: () => {
+ clearInterval(timerInterval)
 }
-// Quando o tamanho da janela é alterado, ela executa a função acima
-window.onresize = () => {
-      getWindowSizes();
+}).then((result) => {
+/* Read more about handling dismissals below */
+ if (result.dismiss === Swal.DismissReason.timer) {
+console.log('I was closed by the timer')
 }
+})
 
-// Então precisamos ouvir quando o mouse é movido
-// Se o mouse for movido, ele faz alguns cálculos mágicos
-// E então a função setMargin é executada com as variáveis ​​calculadas
-// Compartilhado por 10 pode ser 100 para um efeito mais suave
-
-window.onmousemove = ( e ) => {
-      leftPosition = ( e.clientX - width ) / 0.6;
-      topPosition = ( e.clientY - height ) / 0.6;
-
-      setMargin( leftPosition, topPosition );
-}
-// Abaixo é onde a verdadeira mágica acontece!
-// setMargin irá definir as posições "esquerda" e "topo" do botão
-// Com base nos cálculos executados na função acima
-
-const setMargin = ( left, top ) => {
-      button.style.left = `${ left }px`;
-      button.style.top = `${ top }px`;
-}
+});
