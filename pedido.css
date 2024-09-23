@@ -31,7 +31,7 @@
 
   .logo {
     font-size: 2rem;
-    color: #f26161;
+    color: #0f0149;
     text-transform: uppercase;
     letter-spacing: 2px;
     display: flex;
@@ -53,6 +53,7 @@
 
   .container {
     display: flex;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -60,23 +61,23 @@
 
   h1 {
     font-size: 3rem;
-    color: #f26161;
+    color: rgb(58, 37, 241);
     margin-bottom: 30px;
   }
 
   #yes {
     background-color: #fff;
-    color: #ff6961;
+    color: rgb(58, 37, 241);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
 
   #yes:hover {
-    background-color: #ff6961;
+    background-color: rgb(58, 37, 241);
     color: #fff;
   }
 
   .no {
-    background-color: #ff6961;
+    background-color: #ff0d00;
     color: #fff;
     font-size: 20px;
     padding: 10px 20px;
